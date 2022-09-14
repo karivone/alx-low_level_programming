@@ -21,7 +21,7 @@ int main(void)
 	if (countto % 2 == 1)
 		printf("%li", a);
 
-	printf("\n");
+	printf("%li\n");
 
 	return (0);
 }
