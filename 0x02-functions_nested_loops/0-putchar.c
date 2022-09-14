@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - Prints Holberton
+ * main - Prints putchar
  *
  * Return: Always 0 (Success)
  *
@@ -10,7 +10,7 @@ int main(void)
 {
 
 		_putchar('-');
-		_putchar('P');
+		_putchar('p');
 		_putchar('u');
 		_putchar('t');
 		_putchar('c');
