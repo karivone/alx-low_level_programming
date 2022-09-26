@@ -5,7 +5,8 @@
   * in the initial segment
   * @s: the string to check
   * @accept: character to match
-  * Return: int
+  * Return: the number of bytes in the initial segment of @s which consist only
+  *of bytes from @accept
   */
 
 unsigned int _strspn(char *s, char *accept)
@@ -15,17 +16,16 @@ unsigned int _strspn(char *s, char *accept)
 
 	for (i = 0; s[i] >= '\0'; i++)
 	{
-		for (j = 0; accept[j] > '\0'; j++)
+		if (s[i] != 32)
 		{
-			if (s[i] == accept[j])
+			for (j = 0; accept[j] > '\0'; j++)
 			{
-			cmpt++;
-			break;
+				if (s[i] == accept[j])
+					c++;
 			}
 		}
-	if (accept[j] == '\0')
-	{
-		break;
+		else
+			return (c);
 	}
-	return (cmpt);
+	return (c);
 }
