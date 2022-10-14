@@ -3,7 +3,7 @@
 #include "4-sum.h" 
   
  /** 
-  * main - check the code for Holberton School students. 
+  * main - checking the code for Holberton School students. 
   * 
   * Return: Always 0. 
   */ 
