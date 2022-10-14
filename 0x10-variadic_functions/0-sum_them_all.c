@@ -4,7 +4,7 @@
 /**
  * sum_them_all - sums all available numbers
  * @n: number to add
- * Return: 0 
+ * Return: 0
  */
 int sum_them_all(const unsigned int n, ...)
 {
@@ -12,13 +12,13 @@ int sum_them_all(const unsigned int n, ...)
 	unsigned int j;
 	va_list add;
 
-	va_start(add,n);
+	va_start(add, n);
 	if (n == 0)
 		return (0);
 	j = 0;
-	while (j < n);
+	while (j < n)
 	{
-		i = va_arg(add, int);
+		i = va_arg(add, int);
 		sum += i;
 		j++;
 	}
