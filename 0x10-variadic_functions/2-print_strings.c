@@ -2,6 +2,7 @@
 #include "variadic_functions.h"
 #include "stdarg.h"
 
+
 /**
  * print_strings - prints strings
  * @separator: separates the strings
@@ -11,29 +12,22 @@
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i;
+	unsigned int index;
 	char *str;
 
 	va_list strs;
 
 	va_start(strs, n);
-	i = 0;
-	while (i < n)
+	for (index = 0; index < n; index++)
 	{
 		str = va_arg(strs, char *);
-		if (str)
-		{
-			printf("%s", str);
-		}
-		else
-		{
+
+		if (str == NULL)
 			printf("(nil)");
-		}
-		if (i != (n - 1) && separator != NULL)
-		{
+		else
+			printf("%s", str);
+		if (index != (n - 1) && separator != NULL)
 			printf("%s", separator);
-		}
-		i++;
 	}
 	printf("\n");
 	va_end(strs);
