@@ -1,7 +1,8 @@
 #include "search_algos.h"
 
 /**
- * 00jump_search - find square root, jump steps to find match, end linear search
+ * jump_search - find square root, jump steps to
+ * find match, end linear search
  * @array: given array of ints
  * @size: size of array
  * @value: value to search for
